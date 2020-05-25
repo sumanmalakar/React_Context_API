@@ -1,0 +1,18 @@
+.App{
+  text-align: center;
+  list-style: none;
+  
+}
+
+.nav{
+  display: flex;
+  justify-content: space-around;
+  background-color: darkslategray;
+  color: white;
+  padding-top:10px ;
+}
+.form{
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}

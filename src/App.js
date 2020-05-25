@@ -1,26 +1,22 @@
-import React, { Component } from 'react';
-import Navbar from './components/Navbar';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Home from './components/Home';
-import About from './components/About';
-import Contact from './components/Contact';
-import Post from './components/Post'
+import React from 'react';
+import Movilist from './Movilist'
+import Nav from './Nav'
+import './App.css'
+import Addmovie from  './AddMovie'
 
-class App extends Component{
-  render(){
+import {MovieProvider} from './MovieContext'
+
+const App = () =>{
+  
   return (
-    <BrowserRouter>
-    <div className="App">
-      <Navbar />
-      <Switch>
-       <Route exact path='/' component={Home} />
-        <Route path='/about' component={About} />
-        <Route path='/contact' component={Contact} />
-        <Route path="/:post_id" component={Post}/>
-        </Switch>
-    </div>
-    </BrowserRouter>
+   <MovieProvider>
+   <div className="App">
+    <Nav />
+    <Addmovie />
+    <Movilist />
+   </div>
+    </MovieProvider>
   );
-}
+
 }
 export default App;
